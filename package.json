@@ -1,0 +1,23 @@
+{
+  "name": "SKIOApp",
+  "version": "1.0.0",
+  "main": "build/main.js",
+  "author": "Casey Parker",
+  "email": "parker.casey@icloud.com",
+  "repository": "github:etaletai13/SKIOApp",
+  "license": "MIT",
+  "dependencies": {
+    "nativefier": "latest",
+    "nodeify": "^1.0.1"
+  },
+  "devDependencies": {
+    "electron-packager-interactive": "~0.1.3",
+    "prettier-standard": "~8.0.1"
+  },
+  "scripts": {
+    "prestart": "rm -rf knitting/** release/** && yarn lint",
+    "lint": "yarn prettier-standard **/*.js **/*.json --write",
+    "start": "node ./build && yarn prettier-standard knitting/**/*.js knitting/**/*.json --write && node ./pack",
+    "dev": "yarn prestart && node ./build && yarn prettier-standard knitting/**/*.json --write"
+  }
+}

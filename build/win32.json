@@ -1,0 +1,40 @@
+{
+  "name": "SKIOApp",
+  "targetUrl": "https://skiomusic.com/login",
+  "disableDevTools": true,
+  "disableContextMenu": true,
+  "verbose": true,
+  "titleBarStyle": "hidden",
+  "hideWindowFrame": true,
+  "platform": "win32",
+  "arch": "x64",
+  "version": "0.36.4",
+  "overwrite": true,
+  "overwrite": true,
+  "counter": true,
+  "bounce": true,
+  "maxWidth": 640,
+  "height": 740,
+  "showMenuBar": true,
+  "fastQuit": false,
+  "userAgent": "Mozilla/5.0 (iPad; CPU OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3",
+  "ignoreCertificate": false,
+  "ignoreGpuBlacklist": false,
+  "enableEs3Apis": true,
+  "insecure": false,
+  "honest": false,
+  "zoom": 1.14131211,
+  "singleInstance": true,
+  "inject": ["../lib/main"],
+  "fileDownloadOptions": {
+    "saveAs": true
+  },
+  "win32metadata": {
+    "CompanyName": "Etaletai",
+    "FileDescription": "A simple app for SKIO Music",
+    "OriginalFilename": "SKIOApp",
+    "ProductName": "SKIOApp",
+    "InternalName": "SKIOApp"
+  },
+  "internalUrls": ".*(facebook|google|soundcloud).*(com|net).*"
+}
