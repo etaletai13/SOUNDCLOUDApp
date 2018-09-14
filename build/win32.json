@@ -9,7 +9,7 @@
   "platform": "win32",
   "arch": "x64",
   "version": "0.36.4",
-  "overwrite": true,
+  "out": "knitting",
   "overwrite": true,
   "counter": true,
   "bounce": true,
@@ -17,7 +17,8 @@
   "height": 740,
   "showMenuBar": true,
   "fastQuit": false,
-  "userAgent": "Mozilla/5.0 (iPad; CPU OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3",
+  "userAgent":
+    "Mozilla/5.0 (iPad; CPU OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3",
   "ignoreCertificate": false,
   "ignoreGpuBlacklist": false,
   "enableEs3Apis": true,
@@ -25,7 +26,6 @@
   "honest": false,
   "zoom": 1.14131211,
   "singleInstance": true,
-  "inject": ["../lib/main"],
   "fileDownloadOptions": {
     "saveAs": true
   },

@@ -1,23 +1,29 @@
 {
   "name": "SKIOApp",
+  "description": "SKIO Music desktop app",
+  "keywords": ["music","skio"],
   "version": "1.0.0",
-  "main": "build/main.js",
-  "author": "Casey Parker",
-  "email": "parker.casey@icloud.com",
+  "main": "build/index.js",
+  "author": { 
+    "name": "Casey Parker",
+    "email": "parker.casey@icloud.com",
+    "url": "caseyparker.codes"},
   "repository": "github:etaletai13/SKIOApp",
   "license": "MIT",
-  "dependencies": {
-    "nativefier": "latest",
-    "nodeify": "^1.0.1"
-  },
   "devDependencies": {
-    "electron-packager-interactive": "~0.1.3",
-    "prettier-standard": "~8.0.1"
+    "electron-builder": "~20.28.4",
+    "nativefier": "latest",
+    "prettier-standard": "latest"
   },
   "scripts": {
-    "prestart": "rm -rf knitting/** release/** && yarn lint",
-    "lint": "yarn prettier-standard **/*.js **/*.json --write",
-    "start": "node ./build && yarn prettier-standard knitting/**/*.js knitting/**/*.json --write && node ./pack",
-    "dev": "yarn prestart && node ./build && yarn prettier-standard knitting/**/*.json --write"
+    "postinstall": "echo \"Installing app deps\\n\" && yarn install-app-deps",
+    "lint": "echo \"Linting the yarn\\n\" && yarn prettier-standard build/*.json pack/* *.json --write",
+    "knit": "echo \"Knitting the app\\n\" && node ./build",
+    "box": "yarn box:darwin && yarn box:linux && yarn box:windows",
+    "box:darwin": "echo \"Boxing up to ship DMG:\\n\" && yarn build -m dmg --pd  ./knitting/SKIOApp-darwin-x64/SKIOApp.app",
+    "box:linux": "echo \"Boxing up to ship DEB:\\n\" && yarn build  -l deb --pd  ./knitting/skio-app-linux-x64/",
+    "box:windows": "echo \"Boxing up to ship NSIS:\\n\" && yarn build -w nsis --pd  ./knitting/SKIOApp-win32-x64/",
+    "prepare": "yarn lint && yarn knit && yarn box",
+    "test": "yarn start && echo \"No tests yet.\" && echo $(ls dist)"
   }
 }

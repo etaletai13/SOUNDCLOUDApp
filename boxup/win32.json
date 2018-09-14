@@ -1,0 +1,22 @@
+{
+  "appId": "codes.caseyparker.skio",
+  "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+  },
+  "mac": {
+    "app": "./knitting/SKIOApp-darwin-x64/SKIOApp.app",
+    "category": "public.app-category.music",
+    "target": "dmg",
+    "type": "development"
+}

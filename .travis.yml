@@ -1,0 +1,17 @@
+os: osx
+language: node_js
+before_install:
+- brew install wine
+node_js:
+- stable
+deploy:
+  provider: releases
+  api_key:
+    secure: AZ7jRu5Gw4qLtqAakN4EzMEdtrXTe8v9ZTGQO7onrLzFXPZL+gQvVzy5xRmJq/RM5/MFTwQL9DG6d66ppIyQrVhjgR66UMqFWY3NyGrMGqwieUbXUh8DwfTnX5G4+Wk5WU0D8uMhp52ghv36gYi8bqeGxc0ciWxQM1ZLaXzlMtZdl/fgQZem6QeiyiJu8t9uMPhz9KeMv3YiB9LtBqqJmyvh1iIzaV2MOWD2i3vUgxFWxhCbU+mnHu+Mm6rVP8AgNpHQcoaU0u+E8AfUarT5nve24EdvSpI6eonud3J4huqjFiPCrJKOKcFZu/5U1x0KzxVhb4A17E9YVxVx8Y0b5Xwl6OLRzjEsGswUmA5X6tZA4V3xP0ldbSwpMRExJ9tPqCq6tOkMoDQPevBBhBXPJc1aEzMtyIbED4Syb0qgnLYkNEww9eU/Qxsia4Sx+eLDHA1XIgGdJLtJ+xd0pH0A/J2fhEzN6Ek6lTuD5/HwH1LnmSuxTN7HRR2ig7rOZN+nBFDfFGmejpGMFHJUUEBopIJ9FNXAhJESmSUPSbfHMBRTCa09QKdv8shH4ZV5UqniDyKEY+vPaaoVPOrfigAgSMUBFFi1HyLRq/mUUlkz97QC7F0C9IGYvyZEC/kKbyRPOldWcU/45VDF6/JvnJlmT/n3V8Vcs0bXCnDyyn51LhU=
+  skip_cleanup: true
+  file: 
+  - 'dist/SOUNDCLOUDApp_1.0.0_amd64.deb'
+  - 'dist/SOUNDCLOUDApp-1.0.0.dmg'
+  - 'dist/SOUNDCLOUDApp Setup 1.0.0.exe'
+  on:
+    repo: etaletai13/SOUNDCLOUDApp
